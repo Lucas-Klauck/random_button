@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Animação</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #4A4A8B;
+            overflow: hidden;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #FF5757;
+            animation: bounce 2s infinite;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .box h1 {
+            color: white;
+            font-size: 0.8rem; /* Tamanho da fonte ajustado para caber dentro da bolinha */
+            text-align: center;
+            padding: 5px; /* Adiciona algum espaço interno */
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-150px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1 id="message">Eu sei que você clicou no sim</h1>
+    </div>
+    <button onclick="goBack()">Voltar para a Tela 1</button>
+
+    <script>
+        function goBack() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
